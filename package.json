@@ -1,0 +1,8 @@
+{
+  "name": "demo",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-requirejs": "^0.4.0",
+    "gulp-sourcemaps": "^1.9.1"
+  }
+}

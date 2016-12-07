@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>require demo</title>
+	<script src="dev/js/lib/require.js" data-main="dev/js/config"></script>
+</head>
+<body>
+	<div>demo</div>
+	<script>
+		require(["app/main"],function(cncn){
+			// console.log(a(2,4));
+			// console.log(b(3,4));
+			console.log(cncn.a(3,4));
+			// console.log(cncn.b(1,4));
+		});
+	</script>
+</body>
+</html>
