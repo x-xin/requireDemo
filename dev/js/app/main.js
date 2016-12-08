@@ -1,8 +1,9 @@
 define(function(require){
-	var a = require("dev/js/app/a.js"),
-	    b = require("dev/js/app/b.js");
-	return{
-		a: a,
-		b: b
-	}
+    // 导入组件a,b无需后缀名
+    var a = require("app/a"),
+        b = require("app/b");
+    return{
+        a: a,
+        b: b
+    }
 });

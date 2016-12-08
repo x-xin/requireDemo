@@ -1,8 +1,12 @@
-{
-  "name": "demo",
-  "devDependencies": {
-    "gulp": "*",
-    "gulp-requirejs": "^0.4.0",
-    "gulp-sourcemaps": "^1.9.1"
-  }
+{  
+    "name": "Requirejs-Demo",  
+    "version": "0.0.0",  
+    "author": "Roda",  
+    "license": "ISC",  
+
+    "dependencies": {  
+        "gulp-requirejs": "*", 
+        "gulp": "^3.8.10"
+    } 
+    
 }

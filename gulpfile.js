@@ -1,34 +1,24 @@
-var gulp        =   require('gulp'),
-	rjs         =   require('gulp-requirejs'),
-	maps        =   require('gulp-sourcemaps'),
-	path       	=   {
-						dev: 'dev/',
-						dest: 'dest/'
-					};
+var gulp = require('gulp'),
+    rjs  = require('gulp-requirejs');
+  
+// rjs
+gulp.task('r', function () {  
 
-
-gulp.task("r",function(){
-	gulp
-		.src(path.dev+"js/config.js")
-		.pipe(gulp.dest(path.dest+"js/"));
-
-	gulp
-		.src(path.dev+"js/lib/*.js")
-		.pipe(gulp.dest(path.dest+"js/lib/"));
-
-	rjs({
-		name:'app/main',
-		baseUrl:"dev/js/lib/",
-		paths:{
-			app  :  "../app"
-		},
-		mainConfigFile:path.dev+"js/config.js",
-		out:"main.js",
-		generateSourceMaps: true,
-		optimize:false
-	})
-	.pipe(maps.init({loadMaps: true}))
-	.pipe(maps.write(''))
-	.pipe(gulp.dest(path.dest+'js/app/'));
-
-});
+    gulp
+        .src('dev/js/config.js')
+        .pipe(gulp.dest('dest/js'));
+    gulp
+        .src('dev/js/lib/*.js')
+        .pipe(gulp.dest('dest/js/lib/'));
+    rjs({
+        name: 'app/main',  // 要处理的入口文件，名字和out 要保持一致
+        baseUrl: 'dev/js/lib/',
+        paths: {
+            app    : "../app/"
+        },
+        mainConfigFile:'dev/js/config.js',
+        out: 'main.js', // 输出的文件
+        optimize:false
+    })
+   .pipe(gulp.dest('dest/js/app/'));
+}); 
