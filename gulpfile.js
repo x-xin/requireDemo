@@ -22,3 +22,10 @@ gulp.task('r', function () {
     })
    .pipe(gulp.dest('dest/js/app/'));
 }); 
+
+gulp.task('default', ['r'], function(){
+        
+    //监听js
+    gulp.watch('dev/js/**', ['r']);
+    
+});
