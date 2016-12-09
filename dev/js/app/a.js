@@ -1,5 +1,9 @@
 define(function(){
-    return function(x,y){
+
+    var add = function(x,y){
         return x+y;
     }
+    
+    return add;
+
 });
