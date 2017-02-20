@@ -10,6 +10,14 @@
         require(['app/main'],function(cncn){
 
             console.log(cncn);
+            var roda = cncn.person({
+                age: '26',
+                name: 'Shadow',
+                salary: 10000,
+                some: 'what are you say?'
+            });
+            console.log(roda.getName());
+            console.log(roda.sayWhat());
             // console.log(cncn.b(3,10));
             // console.log(cncn.a(10,90));
             console.log($(".demo").text());

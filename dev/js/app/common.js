@@ -1,5 +1,11 @@
+/*
+ * Author  2017@Roda.Wang  
+ * QQ      835972558
+*/
+
 define(function(){
 
-    return $(".demo").text("common");
+    $(".demo").text("common");
+    console.log("This is common");
 
 });
